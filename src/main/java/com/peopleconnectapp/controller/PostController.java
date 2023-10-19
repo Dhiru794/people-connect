@@ -1,5 +1,10 @@
-package com.peopleconnectapp;
+package com.peopleconnectapp.controller;
 
+import com.peopleconnectapp.exception.CatchException;
+import com.peopleconnectapp.exception.FetchAllPostException;
+import com.peopleconnectapp.exception.PeopleConnectException;
+import com.peopleconnectapp.services.PostService;
+import com.peopleconnectapp.model.Posts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -29,10 +34,12 @@ public class PostController {
     }
 
     @CrossOrigin
+    @CatchException
     @GetMapping(path = "/getAll",produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Posts>> getAllPosts(@RequestParam String categoryName) {
-        List<Posts> posts = postService.getAllPosts(categoryName);
-        return new ResponseEntity<List<Posts>>(posts, HttpStatus.OK);
+    public ResponseEntity<List<Posts>> getAllPosts(@RequestParam String categoryName) throws FetchAllPostException {
+        List<Posts> posts;
+        posts = postService.getAllPosts(categoryName);
+        return new ResponseEntity<>(posts, HttpStatus.OK);
     }
 
 

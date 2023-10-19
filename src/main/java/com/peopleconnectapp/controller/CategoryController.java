@@ -1,5 +1,8 @@
-package com.peopleconnectapp;
+package com.peopleconnectapp.controller;
 
+import com.peopleconnectapp.exception.CatchException;
+import com.peopleconnectapp.model.Category;
+import com.peopleconnectapp.services.CategoryService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -12,7 +15,7 @@ import java.util.List;
 @Controller
 @RequestMapping(path = "/category")
 public class CategoryController {
-    private CategoryService categoryService;
+    private final CategoryService categoryService;
 
     public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;

@@ -1,4 +1,4 @@
-package com.peopleconnectapp;
+package com.peopleconnectapp.model;
 
 import com.azure.spring.data.cosmos.core.mapping.Container;
 import com.azure.spring.data.cosmos.core.mapping.GeneratedValue;

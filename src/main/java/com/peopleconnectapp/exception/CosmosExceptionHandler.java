@@ -1,4 +1,4 @@
-package com.peopleconnectapp;
+package com.peopleconnectapp.exception;
 
 import com.azure.cosmos.CosmosException;
 import org.springframework.core.Ordered;
