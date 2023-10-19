@@ -1,4 +1,4 @@
-package com.azure.cosmosdb.demo;
+package com.peopleconnectapp;
 
 import com.azure.cosmos.CosmosException;
 import org.springframework.core.Ordered;

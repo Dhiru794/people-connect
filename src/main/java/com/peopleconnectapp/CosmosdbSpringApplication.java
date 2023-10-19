@@ -1,4 +1,4 @@
-package com.azure.cosmosdb.demo;
+package com.peopleconnectapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
